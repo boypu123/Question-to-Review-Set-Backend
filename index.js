@@ -593,6 +593,7 @@ app.post('/add-modify-question', async (req, res) => {
           { $set: updateFields },
           { new: true }
         ).then((doc) => {
+          res.json({'message': 'OK'})
           console.log('Update successful:', doc);
         }).catch((err) => {
           console.error('Error during update:', err);
